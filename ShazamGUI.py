@@ -24,7 +24,7 @@ async def recognize_and_rename(audio_file):
             renamed_file = os.path.join(os.path.dirname(audio_file), f"{new_creator_name} - {new_song_name}{os.path.splitext(audio_file)[1]}")
             os.rename(audio_file, renamed_file)
             print("File renamed to:", renamed_file)
-            messagebox.showinfo("Success", f"File renamed to: {renamed_file}")
+            # messagebox.showinfo("Success", f"File renamed to: {renamed_file}")
         else:
             print("Song recognition failed for file:", audio_file)
             messagebox.showerror("Error", "Song recognition failed.")
